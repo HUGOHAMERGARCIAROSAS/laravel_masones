@@ -31,9 +31,9 @@
     <script src="{{ asset('admin_template/js/jquery-ui.min.js')}}"></script>
     <script src="{{ asset('admin_template/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('login_template/js/adminlte.js')}}"></script>
-
-
     @yield('scripts')
+
+
 </body>
 
 </html>

@@ -4,11 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Administracion\DashboardController;
+
 use App\Http\Controllers\Administracion\InicioAdminController;
+use App\Http\Controllers\Administracion\DocenciaMasonicaAdminController;
 
 use App\Http\Middleware\RedirectIfAuthenticated;
 
 use App\Http\Controllers\web\InicioController;
+use App\Http\Controllers\web\DocenciaMasonicaController;
 
 
 
@@ -50,6 +53,18 @@ Route::post('administracion/masones_ilustres/subir-imagen', [InicioAdminControll
 Route::post('administracion/masones_ilustres/descripcion-actualizar', [InicioAdminController::class, 'actualizarMasonesIlustresDescripcion'])->name('administracion.masones_ilustres.descripcion.actualizar');
 Route::post('administracion/masones_ilustres/imagenes-eliminar/{id}', [InicioAdminController::class, 'eliminarMasonesIlustresImages'])->name('administracion.masones_ilustres.imagenes.eliminar');
 
+
+// DOCENTES MASONICOS ADMINISTRACION 
+
+Route::get('administracion/trabajos_masonicos',[DocenciaMasonicaAdminController::class, 'trabajosMasonicos'])->middleware(['auth'])->name('administracion.trabajos_masonicos');
+Route::post('administracion/trabajos_masonicos/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarTrabajosMasonicos'])->name('administracion.trabajos_masonicos.actualizar');
+
+Route::get('administracion/revistas_masonicas',[DocenciaMasonicaAdminController::class, 'revistasMasonicas'])->middleware(['auth'])->name('administracion.revistas_masonicas');
+Route::post('administracion/revistas_masonicas/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarRevistasMasonicas'])->name('administracion.revistas_masonicas.actualizar');
+
+Route::get('administracion/libros_masonicos',[DocenciaMasonicaAdminController::class, 'librosMasonicos'])->middleware(['auth'])->name('administracion.libros_masonicos');
+Route::post('administracion/libros_masonicos/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarLibrosMasonicos'])->name('administracion.libros_masonicos.actualizar');
+
 // INICIO WEB 
 
 Route::get('nosotros',[InicioController::class, 'nosotros'])->name('nosotros');
@@ -59,4 +74,22 @@ Route::get('templos',[InicioController::class, 'templos'])->name('templos');
 Route::get('docencia_masonica',[InicioController::class, 'docencia_masonica'])->name('docencia_masonica');
 
 Route::get('masones_ilustres',[InicioController::class, 'masonesIlustres'])->name('masones_ilustres');
+
+
+// DOCENCIA MASONICA WEB 
+
+Route::get('trabajos_masonicos',[DocenciaMasonicaController::class, 'trabajosMasonicos'])->name('trabajos_masonicos');
+Route::get('libros_masonicos',[DocenciaMasonicaController::class, 'librosMasonicos'])->name('libros_masonicos');
+Route::get('revistas_masonicas',[DocenciaMasonicaController::class, 'revistasMasonicas'])->name('revistas_masonicas');
+Route::get('conferencias_masonicas',[DocenciaMasonicaController::class, 'conferenciasMasonicas'])->name('conferencias_masonicas');
+Route::get('videos_masonicos',[DocenciaMasonicaController::class, 'videosMasonicos'])->name('videos_masonicos');
+
+
+// RED DE LOGIAS WEB
+
+Route::get('red_logias',[DocenciaMasonicaController::class, 'redLogias'])->name('red_logias');
+Route::get('eventos',[DocenciaMasonicaController::class, 'eventos'])->name('eventos');
+Route::get('contactanos',[DocenciaMasonicaController::class, 'contactanos'])->name('contactanos');
+
+
 

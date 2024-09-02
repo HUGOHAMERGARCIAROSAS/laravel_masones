@@ -6,7 +6,7 @@ define('LARAVEL_START', microtime(true));
 
 // para guardar las imagenes en la carpeta public al momento de producción
 
-$public = public_path();
+// $public = public_path();
 // $storage = storage_path();
  
 // Determine if the application is in maintenance mode...

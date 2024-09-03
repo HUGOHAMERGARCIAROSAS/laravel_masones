@@ -72,7 +72,8 @@
                 </li>
                 <li class="nav-item menu-open">
                     <a
-                        class="nav-link   <?= request()->is('administracion/trabajos_masonicos') || request()->is('administracion/libros_masonicos') || request()->is('administracion/revistas_masonicas') ? 'active' : '' ?>">
+                        class="nav-link   <?= request()->is('administracion/trabajos_masonicos') || request()->is('administracion/libros_masonicos') || request()->is('administracion/revistas_masonicas') 
+                        || request()->is('administracion/videos_masonicos') || request()->is('administracion/conferencias_masonicas') ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Docencia Masónica
@@ -102,13 +103,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="{{ route('administracion.conferencias_masonicas') }}" class="nav-link <?= request()->is('administracion/conferencias_masonicas') ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Conferencias Masónicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="{{ route('administracion.videos_masonicos') }}" class="nav-link  <?= request()->is('administracion/videos_masonicos') ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Videos Masónicos</p>
                             </a>

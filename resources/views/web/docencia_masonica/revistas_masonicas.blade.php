@@ -27,16 +27,13 @@ background-position: center">
                     <div class="col-lg-12 mb-5">
                         <h1 class="fw-bold mb-3">Revistas Masónicas</h1>
                         <p class="mb-4 linea-decorativa">
-                            Las revistas masónicas son una ventana hacia el vasto mundo de la filosofía, la historia y la
-                            tradición masónica. Estas publicaciones ofrecen una rica variedad de artículos, ensayos y
-                            entrevistas que exploran los principios y prácticas de la masonería, así como su relevancia en
-                            la sociedad contemporánea.
+                            {!! $revistas_masonicas->descripcion !!}
                         </p>
                     </div>
                     <br><br>
                     <div class="col-lg-12">
                         <a class="btn btn-primary text-white custom-button"
-                            href="https://drive.google.com/drive/folders/1eOfSoFJw-ANmhXbDHEvcLWCQ6CUiQp2C" target="_blank">
+                            href="{{ $revistas_masonicas->link }}" target="_blank">
                             <i class="fa fa-angle-right me-2"></i>Link de Acceso
                         </a>
                     </div>

@@ -47,28 +47,19 @@ background-position: center">
                     <div class="col-lg-12 mb-5">
                         <h1 class="fw-bold mb-3">Videos Masónicos</h1>
                         <p class="mb-4 linea-decorativa">
-                            Muchos videos masónicos son documentales que ofrecen una visión profunda y perspicaz de la
-                            historia, la filosofía y los principios de la masonería. Estas producciones audiovisuales
-                            exploran los orígenes de la fraternidad, su evolución a lo largo de los siglos y su impacto en
-                            la sociedad contemporánea.
+                            {!! $videos_masonicos->descripcion !!}
                         </p>
                     </div>
-                    <div class="col-lg-12 mb-5">
-                        <div class="responsive-video">
-                            <iframe width="800" height="500"
-                                src="https://www.youtube.com/embed/OZUASZl7U-E?si=03a-pVkLH-KgYlwe" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                    @foreach ($detalle_videos_masonicos as $videos)
+                        <div class="col-lg-12 mb-5">
+                            <div class="responsive-video">
+                                <iframe width="800" height="500"
+                                    src="https://www.youtube.com/embed/{{ $videos->video_id }}" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 mb-5">
-                        <div class="responsive-video">
-                            <iframe width="800" height="500"
-                                src="https://www.youtube.com/embed/OZUASZl7U-E?si=03a-pVkLH-KgYlwe" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

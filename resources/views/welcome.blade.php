@@ -263,7 +263,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="counter bg-white rounded p-5">
                             <i class="fa fa-book text-secondary"></i>
-                            <h4>Libros</h4>
+                            <h5 class="text-primary">Libros</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
                                     href="https://drive.google.com/drive/folders/1078rOz0ozgVkuG7IDTYnkFqOXi6-uKqZ"
@@ -276,7 +276,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="counter bg-white rounded p-5">
                             <i class="fa fa-edit text-secondary"></i>
-                            <h4>Artículos</h4>
+                            <h5 class="text-primary">Artículos</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
                                     href="https://drive.google.com/drive/folders/1cCjnf-RCruPc92mYqE5nGEOPOFzkyhq2"
@@ -289,7 +289,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="counter bg-white rounded p-5">
                             <i class="fa fa-video text-secondary"></i>
-                            <h4>Documentales</h4>
+                            <h5 class="text-primary">Documentales</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
                                     href="{{ route('videos_masonicos') }}">
@@ -301,7 +301,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="counter bg-white rounded p-5">
                             <i class="fa fa-user text-secondary"></i>
-                            <h4>Conferencias</h4>
+                            <h5 class="text-primary">Conferencias</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
                                     href="{{ route('conferencias_masonicas') }}">
@@ -317,15 +317,14 @@
 
     <div class="container-fluid service">
         <div class="container py-5">
-            <div class="row text-center mx-auto mb-5" style="max-width: 700px;">
+            <div class="row text-center mx-auto mb-5 " style="max-width: 700px;">
                 <h2 class="display-4">Secciones de interés</h2>
                 <p>Manténgase al día con nuestras actividades institucionales relevantes. Aquí encontrarás una amplia gama
                     de eventos, talleres, conferencias y oportunidades para participar y conectar con otros miembros de
                     nuestra comunidad.</p>
             </div>
-            <br>
             <div class="row g-4 justify-content-center" style="background:#f4f6f8 ">
-                <div class="col-md-6 col-lg-4 pb-5">
+                <div class="col-md-6 col-lg-4 pb-5 pt-4 notpadding">
 
                     <div class="service-item bg-secondary rounded border border-secondary" style="height: 280px">
                         <div class="rounded-bottom" style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);">
@@ -339,8 +338,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 pb-5">
+                </div>  
+                <div class="col-md-6 col-lg-4 pb-5 pt-4 notpadding" >
                     <div class="service-item bg-secondary rounded border border-secondary" style="height: 280px">
                         <div class="rounded-bottom" style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);">
                             <div class="service-content bg-primary text-center p-4 rounded">
@@ -354,7 +353,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 pb-5">
+                <div class="col-md-6 col-lg-4 pb-5 pt-4 notpadding">
                     <div class="service-item bg-secondary rounded border border-secondary" style="height: 280px">
                         <div class="rounded-bottom" style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);">
                             <div class="service-content bg-primary text-center p-4 rounded">

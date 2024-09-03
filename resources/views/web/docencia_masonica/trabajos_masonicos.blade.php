@@ -27,15 +27,12 @@ background-position: center">
                     <div class="col-lg-12 mb-5">
                         <h1 class="fw-bold mb-3">Trabajos Masónicos</h1>
                         <p class="mb-4 linea-decorativa">
-                            Los trabajos masónicos son documentos que narran las experiencias transformadoras que despiertan
-                            la mente, el corazón y el espíritu. A través de la participación en estos trabajos, los hermanos
-                            se embarcan en un viaje de autodescubrimiento y crecimiento personal, encontrando significado y
-                            propósito en la búsqueda de la luz y la verdad.
+                            {!! $trabajos_masonicos->descripcion !!}
                         </p>
                     </div>
                     <div class="col-lg-12">
                         <a class="btn btn-primary text-white custom-button"
-                            href="https://drive.google.com/drive/folders/1cCjnf-RCruPc92mYqE5nGEOPOFzkyhq2" target="_blank">
+                            href="{{ $trabajos_masonicos->link }}" target="_blank">
                             <i class="fa fa-angle-right me-2"></i>Link de Acceso
                         </a>
                     </div>

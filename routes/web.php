@@ -65,6 +65,18 @@ Route::post('administracion/revistas_masonicas/actualizar', [DocenciaMasonicaAdm
 Route::get('administracion/libros_masonicos',[DocenciaMasonicaAdminController::class, 'librosMasonicos'])->middleware(['auth'])->name('administracion.libros_masonicos');
 Route::post('administracion/libros_masonicos/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarLibrosMasonicos'])->name('administracion.libros_masonicos.actualizar');
 
+Route::get('administracion/videos_masonicos',[DocenciaMasonicaAdminController::class, 'videosMasonicos'])->middleware(['auth'])->name('administracion.videos_masonicos');
+Route::post('administracion/videos_masonicos/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarVideosMasonicos'])->name('administracion.videos_masonicos.actualizar');
+Route::post('administracion/videos_masonicos/storeLinks', [DocenciaMasonicaAdminController::class, 'storeLinksVideosMasonicos'])->name('administracion.videos_masonicos.storeLinks');
+Route::post('administracion/videos_masonicos/destroyLinks/{id}', [DocenciaMasonicaAdminController::class, 'destroyLinksVideosMasonicos'])->name('administracion.videos_masonicos.destroyLinks');
+Route::post('administracion/videos_masonicos/updateLinks/{id}', [DocenciaMasonicaAdminController::class, 'updateLinksVideosMasonicos'])->name('administracion.videos_masonicos.updateLinks');
+
+Route::get('administracion/conferencias_masonicas',[DocenciaMasonicaAdminController::class, 'conferenciasMasonicas'])->middleware(['auth'])->name('administracion.conferencias_masonicas');
+Route::post('administracion/conferencias_masonicas/actualizar', [DocenciaMasonicaAdminController::class, 'actualizarConferenciasMasonicas'])->name('administracion.conferencias_masonicas.actualizar');
+Route::post('administracion/conferencias_masonicas/storeLinks', [DocenciaMasonicaAdminController::class, 'storeLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.storeLinks');
+Route::post('administracion/conferencias_masonicas/destroyLinks/{id}', [DocenciaMasonicaAdminController::class, 'destroyLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.destroyLinks');
+Route::post('administracion/conferencias_masonicas/updateLinks/{id}', [DocenciaMasonicaAdminController::class, 'updateLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.updateLinks');
+
 // INICIO WEB 
 
 Route::get('nosotros',[InicioController::class, 'nosotros'])->name('nosotros');

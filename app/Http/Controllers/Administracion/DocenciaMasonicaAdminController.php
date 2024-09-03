@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use App\Models\TrabajosMasonicos;
 use App\Models\RevistasMasonicas;
 use App\Models\LibrosMasonicos;
+use App\Models\VideosMasonicos;
+use App\Models\DetalleVideosMasonicos;
+use App\Models\ConferenciasMasonicas;
+use App\Models\DetalleConferenciasMasonicas;
 
 class DocenciaMasonicaAdminController extends Controller
 {
@@ -55,5 +59,112 @@ class DocenciaMasonicaAdminController extends Controller
         $libros_masonicos->link = $request->link;
         $libros_masonicos->save();
         return redirect()->route('administracion.libros_masonicos')->with('success', 'Actualizada correctamente');
+    }
+
+    
+
+    public function videosMasonicos()
+    {
+        $videos_masonicos = VideosMasonicos::find(1);
+        $detalle_videos_masonicos = DetalleVideosMasonicos::where('id_videos_masonicos', $videos_masonicos->id)->where('activo', 1)->orderBy('id', 'ASC')->get();
+        return view('administracion.docencia_masonica.videos_masonicos')->with(compact('videos_masonicos','detalle_videos_masonicos'));
+    }
+
+    public function actualizarVideosMasonicos(Request $request)
+    {
+        $videos_masonicos = VideosMasonicos::find(1);
+        $videos_masonicos->descripcion = $request->descripcion;
+        $videos_masonicos->save();
+        return redirect()->route('administracion.videos_masonicos')->with('success', 'Actualizada correctamente');
+    }
+
+    public function storeLinksVideosMasonicos(Request $request)
+    {
+
+        $request->validate([
+            'link' => 'required',
+            'detalle' => 'required'
+        ]);
+        $videos_masonicos = VideosMasonicos::find(1);
+        $link = new DetalleVideosMasonicos();
+        $link->detalle = $request->detalle;
+        $link->link = $request->link;
+        $link->id_videos_masonicos = $videos_masonicos->id;
+        $link->activo=1;
+        $link->tipo=1;
+        $link->save();
+        return redirect()->route('administracion.videos_masonicos')->with('success', 'Guardado correctamente');
+    }
+
+
+    public function destroyLinksVideosMasonicos($id)
+    {
+        $link = DetalleVideosMasonicos::find($id);
+        $link->activo=0;
+        $link->save();
+        return redirect()->route('administracion.videos_masonicos')->with('success', 'Eliminado correctamente');
+    }
+
+
+    public function updateLinksVideosMasonicos(Request $request, $id)
+    {
+        $link = DetalleVideosMasonicos::find($id);
+        $link->detalle = $request->detalle;
+        $link->link = $request->link;
+        $link->save();
+        return redirect()->route('administracion.videos_masonicos')->with('success', 'Actualizado correctamente');
+    }
+
+
+    public function conferenciasMasonicas()
+    {
+        $conferencias_masonicas = ConferenciasMasonicas::find(1);
+        $detalle_conferencias_masonicas = DetalleConferenciasMasonicas::where('id_conferencias_masonicas', $conferencias_masonicas->id)->where('activo', 1)->orderBy('id', 'ASC')->get();
+        return view('administracion.docencia_masonica.conferencias_masonicas')->with(compact('conferencias_masonicas','detalle_conferencias_masonicas'));
+    }
+
+    public function actualizarConferenciasMasonicas(Request $request)
+    {
+        $conferencias_masonicas = ConferenciasMasonicas::find(1);
+        $conferencias_masonicas->descripcion = $request->descripcion;
+        $conferencias_masonicas->save();
+        return redirect()->route('administracion.conferencias_masonicas')->with('success', 'Actualizada correctamente');
+    }
+
+    public function storeLinksConferenciasMasonicas(Request $request)
+    {
+
+        $request->validate([
+            'link' => 'required',
+            'detalle' => 'required'
+        ]);
+        $conferencias_masonicas = ConferenciasMasonicas::find(1);
+        $link = new DetalleConferenciasMasonicas();
+        $link->detalle = $request->detalle;
+        $link->link = $request->link;
+        $link->id_conferencias_masonicas = $conferencias_masonicas->id;
+        $link->activo=1;
+        $link->tipo=1;
+        $link->save();
+        return redirect()->route('administracion.conferencias_masonicas')->with('success', 'Guardado correctamente');
+    }
+
+
+    public function destroyLinksConferenciasMasonicas($id)
+    {
+        $link = DetalleConferenciasMasonicas::find($id);
+        $link->activo=0;
+        $link->save();
+        return redirect()->route('administracion.conferencias_masonicas')->with('success', 'Eliminado correctamente');
+    }
+
+
+    public function updateLinksConferenciasMasonicas(Request $request, $id)
+    {
+        $link = DetalleConferenciasMasonicas::find($id);
+        $link->detalle = $request->detalle;
+        $link->link = $request->link;
+        $link->save();
+        return redirect()->route('administracion.conferencias_masonicas')->with('success', 'Actualizado correctamente');
     }
 }

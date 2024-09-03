@@ -27,16 +27,12 @@ background-position: center">
                     <div class="col-lg-12 mb-5">
                         <h1 class="fw-bold mb-3">Libros Masónicos</h1>
                         <p class="mb-4 linea-decorativa">
-                            Ya sea que estés interesado en explorar la historia de la masonería, profundizar en su
-                            simbolismo o ampliar tu comprensión de sus enseñanzas filosóficas, los libros masónicos ofrecen
-                            una rica y variada selección de recursos para satisfacer tus intereses y necesidades. A través
-                            de su lectura, los hermanos pueden encontrar inspiración, reflexión y guía en su viaje hacia la
-                            búsqueda de la verdad y la perfección moral.
+                            {!! $libros_masonicos->descripcion !!}
                         </p>
                     </div>
                     <div class="col-lg-12">
                         <a class="btn btn-primary text-white custom-button"
-                            href="https://drive.google.com/drive/folders/1078rOz0ozgVkuG7IDTYnkFqOXi6-uKqZ" target="_blank">
+                            href="{{ $libros_masonicos->link }}" target="_blank">
                             <i class="fa fa-angle-right me-2"></i>Link de Acceso
                         </a>
                     </div>

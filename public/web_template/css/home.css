@@ -84,4 +84,9 @@
     margin-top: 10px;
     display: block;
   }
+
+  .notpadding{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+  }
 }

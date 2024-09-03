@@ -59,7 +59,17 @@ class DocenciaMasonicaController extends Controller
 
     public function eventos()
     { 
-        return view('web.eventos');
+
+        $page = request()->get('page', 1);
+        $perPage = 9; 
+
+        $eventos = DB::table('eventos')
+            ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo', DB::raw('SUBSTRING(descripcion, 1, 500) AS descripcion'), 'imagen')
+            ->where('activo', 1)
+            ->orderBy('id', 'desc')
+            ->paginate($perPage, ['*'], 'page', $page);
+
+        return view('web.eventos')->with(compact('eventos'));
     }
 
     public function contactanos(){

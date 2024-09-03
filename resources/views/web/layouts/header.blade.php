@@ -27,7 +27,7 @@
                             <a href="{{ route('francmasoneria') }}" class="dropdown-item">La Francmasonería</a>
                             <a href="{{ route('declaracion_principios') }}" class="dropdown-item">Declaración de
                                 Principios</a>
-                            <a href="{{ route('templos') }}" class="dropdown-item">Templo</a>
+                            <a href="{{ route('templos') }}" class="dropdown-item">Templos</a>
                         </div>
                     </div>
                     <a href="{{ asset('masones_ilustres') }}"
@@ -50,7 +50,7 @@
                     <a href="{{ route('red_logias') }}"
                         class="nav-item nav-link <?= request()->is('red_logias') ? 'active' : '' ?>">Red de Logias</a>
                     <a href="{{ route('eventos') }}"
-                        class="nav-item nav-link <?= request()->is('eventos') ? 'active' : '' ?>">Eventos Realizados</a>
+                        class="nav-item nav-link <?= request()->is('eventos') ? 'active' : '' ?>">Eventos</a>
                     <a href="{{ route('contactanos') }}"
                         class="nav-item nav-link <?= request()->is('contactanos') ? 'active' : '' ?>">Contáctanos</a>
                 </div>

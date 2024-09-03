@@ -499,7 +499,7 @@
 }
 
 .footer .footer-item .btn-link:hover {
-  color: var(--bs-secondary) !important;
+  color: var(--bs-primary) !important;
 }
 
 .footer .footer-item p.mb-4 {

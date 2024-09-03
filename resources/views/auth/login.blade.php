@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="{{ asset('login_template/css/adminlte.css') }}">
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page"
+    style="background-image: url({{ asset('web_template/img/bg_slider.jpg') }}); background-size: 100%">
     <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="{{ route('login') }}" class="h1"><b>Iniciar Sesión</b></a>
+                <img src="{{ asset('web_template/img/logo.jpg') }}" alt="Logia El Solitario de Sayan"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Ingresa tu correo y contraseña</p>

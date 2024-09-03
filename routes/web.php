@@ -7,6 +7,7 @@ use App\Http\Controllers\Administracion\DashboardController;
 
 use App\Http\Controllers\Administracion\InicioAdminController;
 use App\Http\Controllers\Administracion\DocenciaMasonicaAdminController;
+use App\Http\Controllers\Administracion\EventosAdminController;
 
 use App\Http\Middleware\RedirectIfAuthenticated;
 
@@ -76,6 +77,16 @@ Route::post('administracion/conferencias_masonicas/actualizar', [DocenciaMasonic
 Route::post('administracion/conferencias_masonicas/storeLinks', [DocenciaMasonicaAdminController::class, 'storeLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.storeLinks');
 Route::post('administracion/conferencias_masonicas/destroyLinks/{id}', [DocenciaMasonicaAdminController::class, 'destroyLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.destroyLinks');
 Route::post('administracion/conferencias_masonicas/updateLinks/{id}', [DocenciaMasonicaAdminController::class, 'updateLinksConferenciasMasonicas'])->name('administracion.conferencias_masonicas.updateLinks');
+
+// EVENTOS ADMINISTRACION 
+
+Route::get('administracion/eventos',[EventosAdminController::class, 'eventos'])->middleware(['auth'])->name('administracion.eventos');
+Route::get('administracion/eventos/crear', [EventosAdminController::class, 'createEventos'])->name('administracion.eventos.crear');
+Route::post('administracion/eventos/store', [EventosAdminController::class, 'eventosStore'])->name('administracion.eventos.store');
+Route::get('administracion/eventos/editar/{id}', [EventosAdminController::class, 'editarEventos'])->name('administracion.eventos.editar');
+
+Route::post('administracion/eventos/update/{id}', [EventosAdminController::class, 'eventosUpdate'])->name('administracion.eventos.update');
+Route::post('administracion/eventos/destroy/{id}', [EventosAdminController::class, 'eventosDestroy'])->name('administracion.eventos.destroy');
 
 // INICIO WEB 
 

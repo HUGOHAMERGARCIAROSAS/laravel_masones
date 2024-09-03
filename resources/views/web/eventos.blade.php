@@ -27,18 +27,14 @@ background-position: center">
                     <div class="col-lg-12 mb-5">
                         <h1 class="fw-bold mb-3">Eventos</h1>
                         <p class="mb-4 linea-decorativa">
-                            Las revistas masónicas son una ventana hacia el vasto mundo de la filosofía, la historia y la
-                            tradición masónica. Estas publicaciones ofrecen una rica variedad de artículos, ensayos y
-                            entrevistas que exploran los principios y prácticas de la masonería, así como su relevancia en
-                            la sociedad contemporánea.
+                            Las publicaciones y noticias masónicas son una fuente vital de información, conocimiento y
+                            conexión para los miembros de la fraternidad masónica en todo el mundo. Desde revistas y
+                            boletines hasta sitios web y redes sociales, estas plataformas ofrecen una variedad de contenido
+                            que informa, inspira y une a la comunidad masónica.
                         </p>
                     </div>
-                    <br><br>
                     <div class="col-lg-12">
-                        <a class="btn btn-primary text-white custom-button"
-                            href="https://drive.google.com/drive/folders/1eOfSoFJw-ANmhXbDHEvcLWCQ6CUiQp2C" target="_blank">
-                            <i class="fa fa-angle-right me-2"></i>Link de Acceso
-                        </a>
+
                     </div>
                 </div>
             </div>

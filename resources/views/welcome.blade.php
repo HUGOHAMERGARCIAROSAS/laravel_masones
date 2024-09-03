@@ -26,8 +26,8 @@
                         </p>
                     </div>
                     <div class="position-relative mx-auto">
-                        <a href="{{ route('nosotros') }}" class="btn btn-primary text-white"><i
-                                class="fa fa-angle-right me-2"></i> Conocer más</a>
+                        <a href="https://www.youtube.com/watch?v=E_v0MDl5MuM" target="_blank"
+                            class="btn btn-primary text-white"><i class="fa fa-angle-right me-2"></i> Conocer más</a>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-5">
@@ -338,8 +338,8 @@
                             </div>
                         </div>
                     </div>
-                </div>  
-                <div class="col-md-6 col-lg-4 pb-5 pt-4 notpadding" >
+                </div>
+                <div class="col-md-6 col-lg-4 pb-5 pt-4 notpadding">
                     <div class="service-item bg-secondary rounded border border-secondary" style="height: 280px">
                         <div class="rounded-bottom" style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);">
                             <div class="service-content bg-primary text-center p-4 rounded">

@@ -13,6 +13,9 @@ use App\Models\DetalleVideosMasonicos;
 use App\Models\ConferenciasMasonicas;
 use App\Models\DetalleConferenciasMasonicas;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+
 use DB;
 
 class DocenciaMasonicaController extends Controller
@@ -75,6 +78,46 @@ class DocenciaMasonicaController extends Controller
     public function contactanos(){
 
         return view('web.contactanos');
+    }
+
+    public function contactanosEnviar(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'subject' => 'required|string'
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'phone' => $request->phone,
+            'message' => $request->message
+        ];
+
+        Mail::to('administrador@logiaelsolitariodesayan81.com')->send(new ContactMail($data));
+
+        return redirect()->back()->with('success', 'Gracias por contactarnos. En breve nos pondremos en contacto contigo.');
+    }
+
+
+    public function detalleEventos($id)
+    {
+        $evento = DB::table('eventos')
+            ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo','descripcion','imagen')
+            ->where('id', $id)
+            ->get();
+
+        // ultimos 4 eventos
+        $lastEventos = DB::table('eventos')
+            ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo', 'descripcion', 'imagen')
+            ->where('activo', 1)
+            ->orderBy('id', 'desc')
+            ->limit(4)
+            ->get();
+
+        return view('web.detalle_eventos')->with(compact('evento', 'lastEventos'));
     }
 
 }

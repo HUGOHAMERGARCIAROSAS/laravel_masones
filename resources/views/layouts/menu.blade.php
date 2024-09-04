@@ -16,7 +16,7 @@
                 data-accordion="false">
                 <li class="nav-item menu-open">
                     <a href="#"
-                        class="nav-link <?= request()->is('dashboard') || request()->is('administracion/nosotros') || request()->is('administracion/francmasoneria') || request()->is('administracion/declaracion_principios') || request()->is('administracion/templos') ? 'active' : '' ?>">
+                        class="nav-link <?= request()->is('dashboard') || request()->is('administracion/nosotros') || request()->is('administracion/sliders') || request()->is('administracion/francmasoneria') || request()->is('administracion/declaracion_principios') || request()->is('administracion/templos') ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-home"></i>
                         <p>
                             Inicio
@@ -25,16 +25,16 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('dashboard') }}"
-                                class="nav-link <?= request()->is('dashboard') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Inicio</p>
+                            <a href="{{ route('administracion.sliders') }}"
+                                class="nav-link <?= request()->is('administracion/sliders') ? 'active' : '' ?>">
+                                <i class="far fa-image nav-icon"></i>
+                                <p>Sliders</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.nosotros') }}"
                                 class="nav-link <?= request()->is('administracion/nosotros') ? 'active' : '' ?> ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-user-circle nav-icon"></i>
                                 <p>Nosotros</p>
                             </a>
                         </li>
@@ -48,14 +48,14 @@
                         <li class="nav-item">
                             <a href="{{ route('administracion.declaracion_principios') }}"
                                 class="nav-link <?= request()->is('administracion/declaracion_principios') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-bookmark nav-icon"></i>
                                 <p>Declaración de Principios</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.templos') }}"
                                 class="nav-link <?= request()->is('administracion/templos') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-building nav-icon"></i>
                                 <p>Templo</p>
                             </a>
                         </li>
@@ -83,35 +83,35 @@
                         <li class="nav-item">
                             <a href="{{ route('administracion.trabajos_masonicos') }}"
                                 class="nav-link <?= request()->is('administracion/trabajos_masonicos') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-bars nav-icon"></i>
                                 <p>Trabajos Masonicos</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.libros_masonicos') }}"
                                 class="nav-link  <?= request()->is('administracion/libros_masonicos') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-book nav-icon"></i>
                                 <p>Libros Masónicos</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.revistas_masonicas') }}"
                                 class="nav-link  <?= request()->is('administracion/revistas_masonicas') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-file nav-icon"></i>
                                 <p>Revistas Masónicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.conferencias_masonicas') }}"
                                 class="nav-link <?= request()->is('administracion/conferencias_masonicas') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-video nav-icon"></i>
                                 <p>Conferencias Masónicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('administracion.videos_masonicos') }}"
                                 class="nav-link  <?= request()->is('administracion/videos_masonicos') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-file-video nav-icon"></i>
                                 <p>Videos Masónicos</p>
                             </a>
                         </li>
@@ -119,7 +119,7 @@
                 </li>
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="nav-icon fas fa-assistive-listening-systems"></i>
                         <p>
                             Red de Logias
                         </p>
@@ -128,7 +128,7 @@
                 <li class="nav-item menu-open">
                     <a href="{{ route('administracion.eventos') }}"
                         class="nav-link <?= request()->is('administracion/eventos') ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="nav-icon fas fa-calendar"></i>
                         <p>
                             Eventos
                         </p>

@@ -14,6 +14,11 @@
     </div>
     <div class="container-fluid contact py-5">
         <div class="container">
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong class="text-success">{{ session('success') }}</strong>
+            </div>
+        @endif
             <div class="p-5 bg-light rounded">
                 <div class="row g-4">
                     <div class="col-12">
@@ -21,6 +26,7 @@
                             <h1 class="text-primary">CÓNTACTANOS</h1>
                             <p class="mb-0">ENVIE SU MENSAJE POR ESTE MEDIO</p>
                             <p class="mb-0">LLENE LOS CAMPOS INDICADOS</p>
+                           
                         </div>
                     </div>
                     <div class="col-lg-12">
@@ -32,17 +38,18 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <form action="#" class="">
-                            <input type="text" class="w-100 form-control border-0 py-3 mb-4" placeholder="Nombres *"
+                        <form action="{{ route('contactanos.enviar') }}" method="POST">
+                            @csrf
+                            <input type="text" name="name" class="w-100 form-control border-0 py-3 mb-4" placeholder="Nombres *"
                                 required>
-                            <input type="email" class="w-100 form-control border-0 py-3 mb-4" placeholder="Correo *"
+                            <input type="email" name="email" class="w-100 form-control border-0 py-3 mb-4" placeholder="Correo *"
                                 required>
-                            <input type="text" class="w-100 form-control border-0 py-3 mb-4" placeholder="N° de Celular">
-                            <input type="text" class="w-100 form-control border-0 py-3 mb-4"
+                            <input type="text" name="phone" class="w-100 form-control border-0 py-3 mb-4" placeholder="N° de Celular">
+                            <input type="text" name="subject" class="w-100 form-control border-0 py-3 mb-4"
                                 placeholder="Ingresa tu Asunto *" required>
-                            <textarea class="w-100 form-control border-0 mb-4" rows="5" cols="10" placeholder="Ingresa tu Mensaje"></textarea>
+                            <textarea name="message" class="w-100 form-control border-0 mb-4" rows="5" cols="10" placeholder="Ingresa tu Mensaje"></textarea>
                             <button class="w-100 btn form-control border-secondary py-3 bg-white text-primary "
-                                type="submit">Submit</button>
+                                type="submit">Enviar</button>
                         </form>
                     </div>
                     <div class="col-lg-5">

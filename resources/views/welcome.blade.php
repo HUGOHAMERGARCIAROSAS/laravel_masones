@@ -33,14 +33,12 @@
                 <div class="col-md-12 col-lg-5">
                     <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active rounded">
-                                <img src="{{ asset('web_template/img/slider/image_2.jpg') }}"
-                                    class="img-fluid w-100 h-100 rounded img-cover" alt="First slide">
-                            </div>
-                            <div class="carousel-item rounded">
-                                <img src="{{ asset('web_template/img/slider/image_1.jpg') }}"
-                                    class="img-fluid w-100 h-100 rounded img-cover" alt="Second slide">
-                            </div>
+                            @foreach ($sliders as $key=>$item)
+                                <div class="carousel-item {{ $key === 0 ? 'active' : '' }} rounded">
+                                    <img src="{{ asset('admin_template/img/sliders/' . $item->imagen) }}"
+                                        class="img-fluid w-100 h-100 rounded img-cover" alt="slide">
+                                </div>
+                            @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
                             data-bs-slide="prev">
@@ -266,7 +264,7 @@
                             <h5 class="text-primary">Libros</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
-                                    href="https://drive.google.com/drive/folders/1078rOz0ozgVkuG7IDTYnkFqOXi6-uKqZ"
+                                    href="{{$libros->link}}"
                                     target="_blank">
                                     <i class="fa fa-angle-right me-2 iconos-recursos"></i>Acceder
                                 </a>
@@ -279,7 +277,7 @@
                             <h5 class="text-primary">Artículos</h5>
                             <div class="mt-auto text-center">
                                 <a class="btn btn-primary text-white custom-button"
-                                    href="https://drive.google.com/drive/folders/1cCjnf-RCruPc92mYqE5nGEOPOFzkyhq2"
+                                    href="{{$revistas->link}}"
                                     target="_blank">
                                     <i class="fa fa-angle-right me-2 iconos-recursos"></i>Acceder
                                 </a>

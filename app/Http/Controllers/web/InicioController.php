@@ -58,4 +58,6 @@ class InicioController extends Controller
         return view('web.masones_ilustres')->with(compact('masones_ilustres', 'detalle_masones_ilustres', 'todas_imagenes'));
     }
 
+  
+
 }

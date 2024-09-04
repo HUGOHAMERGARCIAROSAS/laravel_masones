@@ -88,6 +88,15 @@ Route::get('administracion/eventos/editar/{id}', [EventosAdminController::class,
 Route::post('administracion/eventos/update/{id}', [EventosAdminController::class, 'eventosUpdate'])->name('administracion.eventos.update');
 Route::post('administracion/eventos/destroy/{id}', [EventosAdminController::class, 'eventosDestroy'])->name('administracion.eventos.destroy');
 
+
+// SLIDERS
+Route::get('administracion/sliders',[DashboardController::class, 'sliders'])->middleware(['auth'])->name('administracion.sliders');
+Route::get('administracion/sliders/crear', [DashboardController::class, 'createSliders'])->name('administracion.sliders.crear');
+Route::post('administracion/sliders/store', [DashboardController::class, 'slidersStore'])->name('administracion.sliders.store');
+Route::get('administracion/sliders/editar/{id}', [DashboardController::class, 'editarSliders'])->name('administracion.sliders.editar');
+Route::post('administracion/sliders/update/{id}', [DashboardController::class, 'slidersUpdate'])->name('administracion.sliders.update');
+Route::post('administracion/sliders/destroy/{id}', [DashboardController::class, 'slidersDestroy'])->name('administracion.sliders.destroy');
+
 // INICIO WEB 
 
 Route::get('nosotros',[InicioController::class, 'nosotros'])->name('nosotros');
@@ -111,8 +120,17 @@ Route::get('videos_masonicos',[DocenciaMasonicaController::class, 'videosMasonic
 // RED DE LOGIAS WEB
 
 Route::get('red_logias',[DocenciaMasonicaController::class, 'redLogias'])->name('red_logias');
+
+
+// EVENTOS WEB
 Route::get('eventos',[DocenciaMasonicaController::class, 'eventos'])->name('eventos');
 Route::get('contactanos',[DocenciaMasonicaController::class, 'contactanos'])->name('contactanos');
+Route::post('administracion/eventos/contactanos/enviar', [DocenciaMasonicaController::class, 'contactanosEnviar'])->name('contactanos.enviar');
+
+Route::get('detalle_eventos/{id}',[DocenciaMasonicaController::class, 'detalleEventos'])->name('detalle.eventos');
+
+
+
 
 
 

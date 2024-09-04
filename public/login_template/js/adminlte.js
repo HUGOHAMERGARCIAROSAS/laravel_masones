@@ -1,8 +1,4 @@
-/*!
- * AdminLTE v3.2.0 (https://adminlte.io)
- * Copyright 2014-2022 Colorlib <https://colorlib.com>
- * Licensed under MIT (https://github.com/ColorlibHQ/AdminLTE/blob/master/LICENSE)
- */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
@@ -12,17 +8,6 @@
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
-
-  /**
-   * --------------------------------------------
-   * AdminLTE CardRefresh.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
 
   var NAME$e = 'CardRefresh';
   var DATA_KEY$e = 'lte.cardrefresh';
@@ -180,16 +165,7 @@
     return CardRefresh._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE CardWidget.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+
 
   var NAME$d = 'CardWidget';
   var DATA_KEY$d = 'lte.cardwidget';
@@ -406,16 +382,7 @@
     return CardWidget._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE ControlSidebar.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+
 
   var NAME$c = 'ControlSidebar';
   var DATA_KEY$c = 'lte.controlsidebar';
@@ -722,16 +689,7 @@
     return ControlSidebar._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE DirectChat.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+  
 
   var NAME$b = 'DirectChat';
   var DATA_KEY$b = 'lte.directchat';
@@ -801,16 +759,7 @@
     return DirectChat._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE Dropdown.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+ 
 
   var NAME$a = 'Dropdown';
   var DATA_KEY$a = 'lte.dropdown';
@@ -941,16 +890,7 @@
     return Dropdown._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE ExpandableTable.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-    * Constants
-    * ====================================================
-    */
+  
 
   var NAME$9 = 'ExpandableTable';
   var DATA_KEY$9 = 'lte.expandableTable';
@@ -1063,16 +1003,7 @@
     return ExpandableTable._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE Fullscreen.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+ 
 
   var NAME$8 = 'Fullscreen';
   var DATA_KEY$8 = 'lte.fullscreen';
@@ -1181,16 +1112,7 @@
     return Fullscreen._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE IFrame.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+  
 
   var NAME$7 = 'IFrame';
   var DATA_KEY$7 = 'lte.iframe';
@@ -1676,16 +1598,7 @@
     return IFrame._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE Layout.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+ 
 
   var NAME$6 = 'Layout';
   var DATA_KEY$6 = 'lte.layout';
@@ -1928,16 +1841,6 @@
     return Layout._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE PushMenu.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
 
   var NAME$5 = 'PushMenu';
   var DATA_KEY$5 = 'lte.pushmenu';
@@ -2154,16 +2057,6 @@
     return PushMenu._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE SidebarSearch.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
 
   var NAME$4 = 'SidebarSearch';
   var DATA_KEY$4 = 'lte.sidebar-search';
@@ -2450,16 +2343,7 @@
     return SidebarSearch._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE NavbarSearch.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+
 
   var NAME$3 = 'NavbarSearch';
   var DATA_KEY$3 = 'lte.navbar-search';
@@ -2558,16 +2442,7 @@
     return NavbarSearch._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE Toasts.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+
 
   var NAME$2 = 'Toasts';
   var DATA_KEY$2 = 'lte.toasts';
@@ -2760,16 +2635,6 @@
     return Toasts._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE TodoList.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
 
   var NAME$1 = 'TodoList';
   var DATA_KEY$1 = 'lte.todolist';
@@ -2874,16 +2739,7 @@
     return TodoList._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------
-   * AdminLTE Treeview.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
+
 
   var NAME = 'Treeview';
   var DATA_KEY = 'lte.treeview';
@@ -3066,4 +2922,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=adminlte.js.map

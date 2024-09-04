@@ -1,2 +1,13 @@
+# Permitir a todos los robots acceder a todo el sitio
 User-agent: *
-Disallow:
+Allow: /
+
+# Bloquear acceso a la carpeta de administración
+Disallow: /admin/
+
+# Bloquear una página específica
+Disallow: /private-page.html
+
+# Bloquear acceso a los archivos dentro de la carpeta /secret/ excepto a un archivo específico
+Disallow: /secret/
+Allow: /secret/special-file.html

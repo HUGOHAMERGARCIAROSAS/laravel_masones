@@ -3,10 +3,18 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
         <meta charset="utf-8">
-        <title>El Solitario de Sayan</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+        <meta content="Logia, El Solitario de Sayan 81, fraternidad, solidaridad, comunidad" name="keywords">
+        <meta content="Bienvenidos, La A∴B∴R∴L∴S∴ “El Solitario de Sayán” N° 81 del Vall∴ de Trujillo, Or∴ del Perú, es una Logia Masónica integrada por Hombres Libres y de Buenas Costumbres, jurisdiccionada a la Gran Logia de los Antiguos, Libres y Aceptados Masones de la República del Perú - G∴L∴P∴, cuyo Gran Maestro es el M∴R∴H∴ Carlos Tejeda Rojas, e integrante de la Confederación Masónica Interamericana - C∴M∴I∴." name="description">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Logia el Solitario de Sayan 81">
+        <meta property="og:description" content="Únete a nuestra comunidad dedicada a la fraternidad y solidaridad.">
+        <meta property="og:image" content="https://www.logiaelsolitariodesayan81.com/web_template/Logo-81.png">
+        <meta property="og:url" content="https://www.logiaelsolitariodesayan81.com/">
+        <meta property="og:type" content="website">
+        <link rel="canonical" href="https://www.logiaelsolitariodesayan81.com/">
+        <meta name="author" content="Logia el Solitario de Sayan 81">
+        <title>El Solitario de Sayan 81</title>
 
         <!-- Favicon -->
         <link href="{{asset('web_template/img/logo.jpg')}}" rel="icon">
@@ -61,6 +69,4 @@
     @yield('scripts')
 </body>
 
-
-<!-- Mirrored from themewagon.github.io/fruitables/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Aug 2024 17:10:37 GMT -->
 </html>

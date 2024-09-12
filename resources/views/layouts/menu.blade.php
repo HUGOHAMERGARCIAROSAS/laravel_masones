@@ -118,19 +118,20 @@
                     </ul>
                 </li>
                 <li class="nav-item menu-open">
-                    <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-assistive-listening-systems"></i>
-                        <p>
-                            Red de Logias
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item menu-open">
                     <a href="{{ route('administracion.eventos') }}"
                         class="nav-link <?= request()->is('administracion/eventos') ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-calendar"></i>
                         <p>
                             Eventos
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="{{ route('administracion.red_logias') }}"
+                        class="nav-link <?= request()->is('administracion/red_logias') ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-calendar"></i>
+                        <p>
+                            Red de Logias
                         </p>
                     </a>
                 </li>

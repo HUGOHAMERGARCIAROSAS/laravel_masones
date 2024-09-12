@@ -47,6 +47,9 @@
                                 Masónicas</a>
                         </div>
                     </div>
+                    <a href="{{ route('sanchez_carrion') }}"
+                        class="nav-item nav-link <?= request()->is('sanchez_carrion') ? 'active' : '' ?>">Sanchez
+                        Carrión</a>
                     <a href="{{ route('red_logias') }}"
                         class="nav-item nav-link <?= request()->is('red_logias') ? 'active' : '' ?>">Red de Logias</a>
                     <a href="{{ route('eventos') }}"

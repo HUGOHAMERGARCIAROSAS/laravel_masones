@@ -88,6 +88,15 @@ Route::get('administracion/eventos/editar/{id}', [EventosAdminController::class,
 Route::post('administracion/eventos/update/{id}', [EventosAdminController::class, 'eventosUpdate'])->name('administracion.eventos.update');
 Route::post('administracion/eventos/destroy/{id}', [EventosAdminController::class, 'eventosDestroy'])->name('administracion.eventos.destroy');
 
+// LOGIAS ADMINISTRACION 
+
+Route::get('administracion/red_logias',[EventosAdminController::class, 'redLogias'])->middleware(['auth'])->name('administracion.red_logias');
+Route::get('administracion/red_logias/crear', [EventosAdminController::class, 'createRedLogias'])->name('administracion.red_logias.crear');
+Route::post('administracion/red_logias/store', [EventosAdminController::class, 'redLogiasStore'])->name('administracion.red_logias.store');
+Route::get('administracion/red_logias/editar/{id}', [EventosAdminController::class, 'editarRedLogias'])->name('administracion.red_logias.editar');
+
+Route::post('administracion/red_logias/update/{id}', [EventosAdminController::class, 'redLogiasUpdate'])->name('administracion.red_logias.update');
+Route::post('administracion/red_logias/destroy/{id}', [EventosAdminController::class, 'redLogiasDestroy'])->name('administracion.red_logias.destroy');
 
 // SLIDERS
 Route::get('administracion/sliders',[DashboardController::class, 'sliders'])->middleware(['auth'])->name('administracion.sliders');
@@ -106,6 +115,9 @@ Route::get('templos',[InicioController::class, 'templos'])->name('templos');
 Route::get('docencia_masonica',[InicioController::class, 'docencia_masonica'])->name('docencia_masonica');
 
 Route::get('masones_ilustres',[InicioController::class, 'masonesIlustres'])->name('masones_ilustres');
+
+
+Route::get('sanchez_carrion',[InicioController::class, 'sanchez_carrion'])->name('sanchez_carrion');
 
 
 // DOCENCIA MASONICA WEB 
@@ -129,6 +141,10 @@ Route::post('administracion/eventos/contactanos/enviar', [DocenciaMasonicaContro
 
 Route::get('detalle_eventos/{id}',[DocenciaMasonicaController::class, 'detalleEventos'])->name('detalle.eventos');
 
+// RED DE LOGIAS
+
+Route::get('red_logias',[DocenciaMasonicaController::class, 'redLogias'])->name('red_logias');
+Route::get('detalle_red_logias/{id}',[DocenciaMasonicaController::class, 'detalleRedLogias'])->name('detalle.red_logias');
 
 
 

@@ -57,7 +57,15 @@ class DocenciaMasonicaController extends Controller
 
     public function redLogias()
     { 
-        return view('web.red_logias');
+        $page = request()->get('page', 1);
+        $perPage = 9; 
+
+        $red_logias = DB::table('red_logias')
+            ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo', DB::raw('SUBSTRING(descripcion, 1, 500) AS descripcion'), 'imagen')
+            ->where('activo', 1)
+            ->orderBy('id', 'desc')
+            ->paginate($perPage, ['*'], 'page', $page);
+        return view('web.red_logias')->with(compact('red_logias'));
     }
 
     public function eventos()
@@ -118,6 +126,24 @@ class DocenciaMasonicaController extends Controller
             ->get();
 
         return view('web.detalle_eventos')->with(compact('evento', 'lastEventos'));
+    }
+
+
+    public function detalleRedLogias($id)
+    {
+        $logia = DB::table('red_logias')
+            ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo','descripcion','imagen')
+            ->where('id', $id)
+            ->get();
+
+        $lastEventos = DB::table('eventos')
+        ->select('id', DB::raw('DATE_FORMAT(fecha, "%b %e, %Y") as fecha'), 'titulo', 'descripcion', 'imagen')
+        ->where('activo', 1)
+        ->orderBy('id', 'desc')
+        ->limit(4)
+        ->get();
+
+        return view('web.detalle_red_logias')->with(compact('logia', 'lastEventos'));
     }
 
 }

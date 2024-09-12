@@ -23,6 +23,10 @@ class InicioController extends Controller
         return view('web.inicio.nosotros')->with('nosotros', $nosotros);
     }
 
+    public function sanchez_carrion(){
+        return view('web.sanchez_carrion');
+    }
+
     public function francmasoneria()
     {
         $francmasoneria = Francmasoneria::first();

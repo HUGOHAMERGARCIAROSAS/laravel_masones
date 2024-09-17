@@ -15,7 +15,7 @@ background-position: center">
         <div class="container py-5">
             <div class="row g-4">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mb-4">
                         <h1 class="fw-bold mb-3">José Faustino Sánchez Carrión</h1>
                         <p class="mb-4">
                             <strong>José Faustino Sánchez Carrión</strong> (*Huamachuco, 13 de febrero de 1787 - † Lima, 2
@@ -23,7 +23,10 @@ background-position: center">
                             fue un prócer independestista peruano.
                         </p>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-6 ">
+                        <img src="{{ asset('jfsc.jpeg') }}" class="img-fluid" style="width: 600px">
+                    </div>
+                    <div class="col-lg-6 mt-4">
                         <h4 class="mb-4"><strong>Biografía</strong></h4>
                         <div class="">
                             Nacido en Huamachuco, andino, remoto y olvidado pueblo perteneciente a la Intendencia de
